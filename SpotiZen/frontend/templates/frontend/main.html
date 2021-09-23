@@ -1,39 +1,54 @@
 {% extends "frontend/index.html" %}
 
 {% block content %}
-	<div class="header">
-		<a href="{% url 'is-spotify-auth' %}">
-			<h1>Is Auth?</h1>
-		</a>
-		<a href="{% url 'top-tracks' %}">
-			<h1>Top Tracks</h1>
-		</a>
-
-		<a href="{% url 'top-artists' %}">
-			<h1>Top Artists</h1>
-		</a>
+	<!-- Header -->
+	<div class="row justify-content-center align-items-center py-4 header">
+		<div class="col-12 col-md-5 title">
+			<h1>SpotiZen</h1>
+		</div>
 	</div>
 	
-	<div class="showcase">
-		<div class="topTracksList">
-			<h1>Top Tracks</h1>
-			<div class="buttonGrid">
-				<button class="track-btn-1">1 Month</button>
-				<button class="track-btn-2">6 Months</button>
-				<button class="track-btn-3">All Time</button>
+	<!-- Top Tracks and Top Artists Showcase-->
+	<div class="row justify-content-around align-items-start py-4 showcase">
+		<div class="col-lg-5 topTracksList">
+			<div class="row justify-content-center align-items-center title">
+				<h1 class="col-8">Top Tracks</h1>
 			</div>
-			<div id=track></div>
+			<div class="row justify-content-around align-items buttonGrid">
+				<button class="col track-btn-1">1 Month</button>
+				<button class="col track-btn-2">6 Months</button>
+				<button class="col track-btn-3">All Time</button>
+			</div>
+			<div class="row justify-content-center align-items-center py-3" id="track"></div>
 		</div>
 
-		<div class="topArtistsList">
-			<h1>Top Artists</h1>
-			<div class="buttonGrid">
-				<button class="artist-btn-1">1 Month</button>
-				<button class="artist-btn-2">6 Months</button>
-				<button class="artist-btn-3">All Time</button>
+		<div class="col-lg-5 topArtistsList">
+			<div class="row justify-content-center align-items-center title">
+				<h1 class="col-8">Top Artists</h1>
 			</div>
-			<div id=artist></div>
+			<div class="row buttonGrid">
+				<button class="col artist-btn-1">1 Month</button>
+				<button class="col artist-btn-2">6 Months</button>
+				<button class="col artist-btn-3">All Time</button>
+			</div>
+			<div class="row justify-content-center align-items-center py-3">
+				<div id="artist"></div>
+			</div>
 		</div>
+	</div>
+
+	<!-- Footer -->
+	<div class="row justify-content-center align-items-center sub-header">
+		<a class="col-7 col-sm-4" href="{% url 'is-spotify-auth' %}">
+			<h1>Is Auth?</h1>
+		</a>
+		<a class="col-7 col-sm-4" href="{% url 'top-tracks' %}">
+			<h1>Top Tracks</h1>
+		</a>
+
+		<a class="col-7 col-sm-4" href="{% url 'top-artists' %}">
+			<h1>Top Artists</h1>
+		</a>
 	</div>
 	
 

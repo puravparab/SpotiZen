@@ -19,7 +19,8 @@ export const getTopTracksList = async (url) => {
 	// Create New List
 	let index = 0;
 	for (let i in data){
-		let str = (index+1) + ": " + data[index].name;
+		let str = (index+1) + ": " + data[index].name 
+					+ " - " + data[index].artists;
 		// console.log(str);
 		let h = document.createElement("h3");
 		let text = document.createTextNode(str);
