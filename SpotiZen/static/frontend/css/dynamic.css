@@ -1,0 +1,24 @@
+.showcase .title h1{
+	text-align: center;
+	font-size: 45px;
+}
+.showcase button{
+	border: none;
+	background-color: goldenrod;
+}
+
+.showcase .topTracksList #track h3{
+	font-size: 17px;
+	line-height: 1.5;
+}
+
+.showcase .topArtistsList #artist h3{
+	font-size: 17px;
+
+}
+
+.showcase .topArtistsList #artist img{
+	width: 100px;
+	height: 100px;
+	padding: 0px;
+}
