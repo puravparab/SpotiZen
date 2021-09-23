@@ -1,0 +1,40 @@
+{% extends "frontend/index.html" %}
+
+{% block content %}
+	<div class="header">
+		<a href="{% url 'is-spotify-auth' %}">
+			<h1>Is Auth?</h1>
+		</a>
+		<a href="{% url 'top-tracks' %}">
+			<h1>Top Tracks</h1>
+		</a>
+
+		<a href="{% url 'top-artists' %}">
+			<h1>Top Artists</h1>
+		</a>
+	</div>
+	
+	<div class="showcase">
+		<div class="topTracksList">
+			<h1>Top Tracks</h1>
+			<div class="buttonGrid">
+				<button class="track-btn-1">1 Month</button>
+				<button class="track-btn-2">6 Months</button>
+				<button class="track-btn-3">All Time</button>
+			</div>
+			<div id=track></div>
+		</div>
+
+		<div class="topArtistsList">
+			<h1>Top Artists</h1>
+			<div class="buttonGrid">
+				<button class="artist-btn-1">1 Month</button>
+				<button class="artist-btn-2">6 Months</button>
+				<button class="artist-btn-3">All Time</button>
+			</div>
+			<div id=artist></div>
+		</div>
+	</div>
+	
+
+{% endblock %}

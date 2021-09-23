@@ -1,0 +1,13 @@
+{% extends "frontend/index.html" %}
+
+{% block content %}
+	
+	<div class="header">
+		<a href="{% url 'is-spotify-auth' %}">
+			<h1>Is Auth?</h1>
+		</a>
+		<a href="{% url 'spotify-auth' %}">
+			<h1>Auth</h1>
+		</a>
+	</div>
+{% endblock %}
