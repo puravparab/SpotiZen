@@ -49,14 +49,17 @@ export const getTopArtistsList = async (url) => {
 	for (let i in data){
 		let str = (index+1) + ": " + data[index].name;
 		// console.log(str);
+		let newDiv = document.createElement("div")
 		let h = document.createElement("h3");
 		let text = document.createTextNode(str);
 		h.appendChild(text);
-		artist.appendChild(h);
 
 		let img = document.createElement("img");
-		img.src = data[index].image
-		artist.appendChild(img);
+		img.src = data[index].image;
+
+		newDiv.appendChild(h);
+		newDiv.appendChild(img);
+		artist.appendChild(newDiv);
 
 		index += 1;
 	}
