@@ -23,22 +23,22 @@ trackbtn2.addEventListener("click", () =>{
 	getTopTracksList(url);
 });
 
-trackbtn3.addEventListener("click", e =>{
+trackbtn3.addEventListener("click", () =>{
 	let url = urlTracks + "/long_term/50?format=json";
 	getTopTracksList(url);
 });
 
-artistbtn1.addEventListener("click", e =>{
+artistbtn1.addEventListener("click", () =>{
 	let url = urlArtists + "/short_term/50?format=json";
 	getTopArtistsList(url);
 });
 
-artistbtn2.addEventListener("click", e =>{
+artistbtn2.addEventListener("click", () =>{
 	let url = urlArtists + "/medium_term/50?format=json";
 	getTopArtistsList(url);
 });
 
-artistbtn3.addEventListener("click", e =>{
+artistbtn3.addEventListener("click", () =>{
 	let url = urlArtists + "/long_term/50?format=json";
 	getTopArtistsList(url);
 });
