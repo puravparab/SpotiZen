@@ -4,6 +4,7 @@ const executeApiRequest = async (url) => {
 	return dataJson;
 }
 
+// Functions for Top Tracks 
 export const getTopTracksList = async (url) => {
 	let data = await executeApiRequest(url);
 	let track = document.getElementById('track');
@@ -19,28 +20,57 @@ export const getTopTracksList = async (url) => {
 	// Create New List
 	let index = 0;
 	for (let i in data){
-		let str = (index+1) + ": " + data[index].name 
-					+ " - " + data[index].artists;
-		// console.log(str);
-		let h = document.createElement("h3");
-		let text = document.createTextNode(str);
-		h.appendChild(text);
-		track.appendChild(h);
+		let trackString = data[index].name;
+		let artistsString = data[index].artists;
 
-		let preview = document.createElement("a")
-		preview.href = data[index].preview;
-		let link = document.createTextNode("preview");
-		preview.appendChild(link);
-		track.appendChild(preview);
+		let grandparentDiv = document.createElement("div");
+		grandparentDiv.className = 'largerTrackContainer';
+		let parentDiv = document.createElement("div");
+		parentDiv.className = 'trackContainer';
+
+		let hIndex = document.createElement("h3");
+		hIndex.className = 'index';
+		let textIndex = document.createTextNode(index + 1);
+		hIndex.appendChild(textIndex);
+		parentDiv.appendChild(hIndex);
 
 		let img = document.createElement("img");
 		img.src = data[index].image;
+		parentDiv.appendChild(img);
+
+		let trackData = document.createElement("div");
+		trackData.className = 'trackData';
+
+		let hTrack = document.createElement("h3");
+		hTrack.className = 'trackName';
+		let textTrack = document.createTextNode(trackString);
+		hTrack.appendChild(textTrack);
+
+		let hArtists = document.createElement("h3");
+		hArtists.className = 'artistsName';
+		let textArtists = document.createTextNode(artistsString);
+		hArtists.appendChild(textArtists);
+
+		trackData.appendChild(hTrack);
+		trackData.appendChild(hArtists);
+		parentDiv.appendChild(trackData);
+
+		let preview = document.createElement("a")
+		preview.href = data[index].preview;
+		let link = document.createTextNode("Preview");
+		preview.appendChild(link);
+
+		parentDiv.appendChild(preview);
+		grandparentDiv.appendChild(parentDiv);
+
+		track.appendChild(grandparentDiv);
 
 		index += 1;
 	}
 
 }
 
+// Functions for Top Artists
 export const getTopArtistsList = async (url) => {
 	let data = await executeApiRequest(url);
 	let artist = document.getElementById('artist');
@@ -56,19 +86,31 @@ export const getTopArtistsList = async (url) => {
 	// Create New List
 	let index = 0;
 	for (let i in data){
-		let str = (index+1) + ": " + data[index].name;
-		// console.log(str);
-		let newDiv = document.createElement("div")
-		let h = document.createElement("h3");
-		let text = document.createTextNode(str);
-		h.appendChild(text);
+		let artistString = data[index].name;
+
+		let grandparentDiv = document.createElement("div");
+		grandparentDiv.className = 'largerArtistContainer';
+		let parentDiv = document.createElement("div");
+		parentDiv.className = 'artistContainer';
+
+		let hIndex = document.createElement("h3");
+		hIndex.className = 'index';
+		let textIndex = document.createTextNode(index + 1);
+		hIndex.appendChild(textIndex);
+		parentDiv.appendChild(hIndex);
 
 		let img = document.createElement("img");
 		img.src = data[index].image;
+		parentDiv.appendChild(img);
 
-		newDiv.appendChild(h);
-		newDiv.appendChild(img);
-		artist.appendChild(newDiv);
+		let hArtist = document.createElement("h3");
+		hArtist.className = 'artistName';
+		let textArtist = document.createTextNode(artistString);
+		hArtist.appendChild(textArtist);
+
+		parentDiv.appendChild(hArtist);
+		grandparentDiv.appendChild(parentDiv);
+		artist.appendChild(grandparentDiv);
 
 		index += 1;
 	}
