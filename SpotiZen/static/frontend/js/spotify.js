@@ -26,6 +26,13 @@ export const getTopTracksList = async (url) => {
 		let text = document.createTextNode(str);
 		h.appendChild(text);
 		track.appendChild(h);
+
+		let preview = document.createElement("a")
+		preview.href = data[index].preview;
+		let link = document.createTextNode("preview");
+		preview.appendChild(link);
+		track.appendChild(preview);
+
 		let img = document.createElement("img");
 		img.src = data[index].image;
 
