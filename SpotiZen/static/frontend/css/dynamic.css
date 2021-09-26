@@ -7,15 +7,16 @@
 	background-color: goldenrod;
 }
 
+/* Tracks List */
 .showcase .topTracksList #track .largerTrackContainer{
 	padding-top: 5px;
 	padding-bottom: 5px;
-	padding-left: 0px;
-	padding-right: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 .showcase .topTracksList #track .trackContainer{
 	display: flex;
-	border: 1px solid darkgray;
+	border: 1.5px solid darkgrey;
 	border-radius: 15px;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -31,10 +32,11 @@
 	margin-bottom: auto;
 	padding: 0;
 	text-align: center;
+	font-size: 20px;
 }
 .showcase .topTracksList #track .trackContainer img{
-	width: 64px;
-	height: 64px;
+	width: 70px;
+	height: 70px;
 	margin-top: auto;
 	margin-bottom: auto;
 }
@@ -44,16 +46,20 @@
 	padding-left: 10px;
 	padding-right: 10px;
 	width: 65%;
+	margin-bottom: auto;
 }
 .showcase .topTracksList #track .trackContainer .trackData .trackName{
-	font-size: 20px;
+	font-size: 19px;
 	font-weight: bold;
-	text-align: center;
+	text-align: left;
+	margin: 0;
+	padding-bottom: 5px;
 }  
 .showcase .topTracksList #track .trackContainer .trackData .artistsName{
-	font-size: 17px;
+	font-size: 15px;
 	color: dark;
-	text-align: center;
+	text-align: left;
+	margin: 0;
 }  
 
 .showcase .topTracksList #track .trackContainer a{
@@ -66,26 +72,43 @@
 	font-weight: bold;
 }  
 
-.showcase .topArtistsList #artist div{
-	width: 25%;
-	padding-bottom: 30px;
+/* Artist List */
+.showcase .topArtistsList #artist .largerArtistContainer{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
-.showcase .topArtistsList #artist h3{
-	text-align: center;
-	font-size: 17px;
-	padding-bottom: 10px;
-	margin: 0;
+.showcase .topArtistsList #artist .artistContainer{
+	display: flex;
+	border: 1.5px solid darkgrey;
+	border-radius: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+
 }
 
-.showcase .topArtistsList #artist img{
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+.showcase .topArtistsList #artist .artistContainer .index{
+	width: 10%;
+	height: 15%;
 	margin-top: auto;
 	margin-bottom: auto;
-	width: 64px;
-	height: 64px;
-	padding: 0px;
+	padding: 0;
+	text-align: center;
+	font-size: 20px;
+}
+.showcase .topArtistsList #artist .artistContainer img{
+	width: 70px;
+	height: 70px;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
-
+.showcase .topArtistsList #artist .artistContainer .artistName{
+	font-size: 20px;
+	color: dark;
+	margin: auto;
+	font-weight: bold;
+}  

@@ -86,19 +86,31 @@ export const getTopArtistsList = async (url) => {
 	// Create New List
 	let index = 0;
 	for (let i in data){
-		let str = (index+1) + ": " + data[index].name;
+		let artistString = data[index].name;
 
-		let newDiv = document.createElement("div")
-		let h = document.createElement("h3");
-		let text = document.createTextNode(str);
-		h.appendChild(text);
+		let grandparentDiv = document.createElement("div");
+		grandparentDiv.className = 'largerArtistContainer';
+		let parentDiv = document.createElement("div");
+		parentDiv.className = 'artistContainer';
+
+		let hIndex = document.createElement("h3");
+		hIndex.className = 'index';
+		let textIndex = document.createTextNode(index + 1);
+		hIndex.appendChild(textIndex);
+		parentDiv.appendChild(hIndex);
 
 		let img = document.createElement("img");
 		img.src = data[index].image;
+		parentDiv.appendChild(img);
 
-		newDiv.appendChild(h);
-		newDiv.appendChild(img);
-		artist.appendChild(newDiv);
+		let hArtist = document.createElement("h3");
+		hArtist.className = 'artistName';
+		let textArtist = document.createTextNode(artistString);
+		hArtist.appendChild(textArtist);
+
+		parentDiv.appendChild(hArtist);
+		grandparentDiv.appendChild(parentDiv);
+		artist.appendChild(grandparentDiv);
 
 		index += 1;
 	}
