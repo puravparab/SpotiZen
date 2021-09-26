@@ -73,7 +73,9 @@ class GetTopTracks(APIView):
 			song_id = i.get("id")
 			duration_ms = i.get("duration_ms")
 			popularity = i.get("popularity")
-			cover = i.get("album").get("images")[2].get("url")
+			cover = i.get("album").get("images")[0].get("url")
+			external_url = i.get("album").get("artists")[0].get("external_urls").get("spotify")
+			preview = i.get("preview_url")
 
 			artist_string = ""
 
@@ -89,7 +91,9 @@ class GetTopTracks(APIView):
 				'duration_ms': duration_ms,
 				'popularity': popularity,
 				'artists': artist_string,
-				'image': cover
+				'image': cover,
+				'external_url': external_url,
+				'preview': preview
 			}
 
 			songsList[count] = song
@@ -117,7 +121,7 @@ class GetTopArtists(APIView):
 			name = i.get("name")
 			artist_id = i.get("id")
 			popularity = i.get("popularity")
-			cover = i.get("images")[2].get("url")
+			cover = i.get("images")[0].get("url")
 			type_ = i.get("type")
 
 			artist = {
