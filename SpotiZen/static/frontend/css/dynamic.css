@@ -7,11 +7,64 @@
 	background-color: goldenrod;
 }
 
-.showcase .topTracksList #track h3{
-	font-size: 17px;
-	line-height: 1.5;
+.showcase .topTracksList #track .largerTrackContainer{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.showcase .topTracksList #track .trackContainer{
+	display: flex;
+	border: 1px solid darkgray;
+	border-radius: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+
 }
 
+.showcase .topTracksList #track .trackContainer .index{
+	width: 10%;
+	height: 15%;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding: 0;
+	text-align: center;
+}
+.showcase .topTracksList #track .trackContainer img{
+	width: 64px;
+	height: 64px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.showcase .topTracksList #track .trackContainer .trackData{
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 65%;
+}
+.showcase .topTracksList #track .trackContainer .trackData .trackName{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}  
+.showcase .topTracksList #track .trackContainer .trackData .artistsName{
+	font-size: 17px;
+	color: dark;
+	text-align: center;
+}  
+
+.showcase .topTracksList #track .trackContainer a{
+	height: 10%;
+	text-decoration: none;
+	margin-top: auto;
+	margin-bottom: auto;
+	font-size: 17px;
+	color: rgb(30, 215, 96);
+	font-weight: bold;
+}  
 
 .showcase .topArtistsList #artist div{
 	width: 25%;
@@ -28,6 +81,8 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
 	width: 64px;
 	height: 64px;
 	padding: 0px;
