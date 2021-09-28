@@ -29,3 +29,21 @@ body{
 	margin: 0px;
 }
 
+.welcome-buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	padding: 50px;
+}
+
+.welcome-buttons button{
+	background-color: lightblue;
+	width: 35%;
+	height: 4rem;
+	border: 1px solid antiquewhite;
+	border-radius: 20px;
+}
+
+.welcome-buttons button:hover{
+	background-color: royalblue;
+}
