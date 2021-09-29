@@ -22,27 +22,48 @@ body{
 }
 
 .welcome-header h1{
-	font-size: 150px;
-	font-family: Arial;
-	font-weight: bold;
-	color: rgb(30, 215, 96);
-	margin: 0px;
+		font-size: 80px;
+		font-family: Arial;
+		font-weight: bold;
+		color: rgb(30, 215, 96);
+		margin: 0px;
+	}
+
+@media screen and (min-width: 700px){
+	.welcome-header h1{
+		font-size: 140px;
+	}
 }
 
 .welcome-buttons {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	padding: 50px;
+	padding: 50px 0px 50px 0px;
+	flex: 0 1 auto;
 }
 
+@media screen and (min-width: 650px){
+	.welcome-buttons{
+		padding: 50px 20px 50px 20px;
+		
+	}
+  
+}
 .welcome-buttons button{
 	background-color: lightblue;
-	width: 35%;
-	height: 4rem;
-	border: 1px solid antiquewhite;
-	border-radius: 20px;
+		width: 45%;
+		height: 4rem;
+		border: 1px solid antiquewhite;
+		border-radius: 15px;
+	}
 }
+@media screen and (min-width: 700px){
+	.welcome-buttons button{
+		width: 35%;
+	}
+}
+
 
 .welcome-buttons button:hover{
 	background-color: royalblue;
