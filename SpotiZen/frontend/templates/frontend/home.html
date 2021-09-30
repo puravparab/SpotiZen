@@ -8,10 +8,13 @@
 		</a>
 
 		<div class="welcome-buttons">
-			<button id="btn1">Top Tracks</button>
-			<button id="btn2">Top Artists</button>
+			<button onclick="location.href = '{% url 'spotify-auth' %}';" id="btn1">
+				Top Tracks
+			</button>
+			<button onclick="location.href = '{% url 'spotify-auth' %}';" id="btn2">
+				Top Artists
+			</button>
 		</div>
 	</div>
-	
 	
 {% endblock %}

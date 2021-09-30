@@ -1,5 +1,6 @@
 import { getTopTracksList, getTopArtistsList} from './spotify.js'
 
+// Home Page
 var urlTracks = "http://192.168.1.101:8000/spotify/top-tracks"
 var urlArtists = "http://192.168.1.101:8000/spotify/top-artists"
 
