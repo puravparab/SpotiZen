@@ -46,25 +46,40 @@ body{
 @media screen and (min-width: 650px){
 	.welcome-buttons{
 		padding: 50px 20px 50px 20px;
+		justify-content: space-between;
 		
 	}
   
 }
 .welcome-buttons button{
-	background-color: lightblue;
-		width: 45%;
-		height: 4rem;
-		border: 1px solid antiquewhite;
-		border-radius: 15px;
-	}
+	width: 45%;
+	height: 4rem;
+	border: 1px solid antiquewhite;
+	border-radius: 15px;
+	font-size: 25px;
+	font-family: Arial;
+	color: white;
+	font-weight: bold;
 }
 @media screen and (min-width: 700px){
 	.welcome-buttons button{
-		width: 35%;
+		width: 35%%;
 	}
 }
 
+.welcome-buttons #btn1{
+	background-color: darkred;
+}
 
-.welcome-buttons button:hover{
-	background-color: royalblue;
+.welcome-buttons #btn2{
+	background-color: darkblue;
+}
+
+.welcome-buttons #btn1:hover{
+	background-color: palevioletred;
+	color: black;
+}
+
+.welcome-buttons #btn2:hover{
+	background-color: lightblue;
 }
