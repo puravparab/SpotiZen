@@ -22,30 +22,46 @@ export const getTopTracksList = async (url) => {
 	for (let i in data){
 		let trackString = data[index].name;
 		let artistsString = data[index].artists;
+		let previewUrl = data[index].preview;
 
 		let grandparentDiv = document.createElement("div");
 		grandparentDiv.className = 'largerTrackContainer';
 		let parentDiv = document.createElement("div");
 		parentDiv.className = 'trackContainer';
 
+		// Create Index
 		let hIndex = document.createElement("h3");
 		hIndex.className = 'index';
 		let textIndex = document.createTextNode(index + 1);
 		hIndex.appendChild(textIndex);
 		parentDiv.appendChild(hIndex);
 
+		// Create Cover Image
 		let img = document.createElement("img");
 		img.src = data[index].image;
+		// Play the track preview when user hovers over track cover
+		img.addEventListener("mouseenter", ()=>{
+			var audio = new Audio(previewUrl);
+			img.style.border = "2px solid green";
+			audio.play()
+			img.addEventListener("mouseleave", ()=>{
+				audio.pause();
+				img.style.border = "";
+			});
+		});
 		parentDiv.appendChild(img);
 
+		// Create Track Details
 		let trackData = document.createElement("div");
 		trackData.className = 'trackData';
 
+		// Add Track Name
 		let hTrack = document.createElement("h3");
 		hTrack.className = 'trackName';
 		let textTrack = document.createTextNode(trackString);
 		hTrack.appendChild(textTrack);
 
+		// Add Track Artist
 		let hArtists = document.createElement("h3");
 		hArtists.className = 'artistsName';
 		let textArtists = document.createTextNode(artistsString);
@@ -55,19 +71,21 @@ export const getTopTracksList = async (url) => {
 		trackData.appendChild(hArtists);
 		parentDiv.appendChild(trackData);
 
+		// Song Preview
 		let preview = document.createElement("a")
 		preview.href = data[index].preview;
+		preview.target = "_blank"
 		let link = document.createTextNode("Preview");
 		preview.appendChild(link);
+		// parentDiv.appendChild(preview);
 
-		parentDiv.appendChild(preview);
+		// Create a track entry
 		grandparentDiv.appendChild(parentDiv);
 
 		track.appendChild(grandparentDiv);
 
 		index += 1;
 	}
-
 }
 
 // Functions for Top Artists
@@ -114,5 +132,4 @@ export const getTopArtistsList = async (url) => {
 
 		index += 1;
 	}
-
 }
