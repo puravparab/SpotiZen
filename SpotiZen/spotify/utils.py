@@ -78,6 +78,6 @@ def executeSpotifyApiRequest(session_id, endpoint, post_=False, put_=False):
 		try:
 			return response.json()
 		except:
-			return{'Error: Issue with request'}
+			return {'Error: Issue with request'}
 	else:
-		return{'Error: Not Available'}
+		return {'Error: Not Available'}

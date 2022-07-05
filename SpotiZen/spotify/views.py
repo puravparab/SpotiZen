@@ -57,7 +57,7 @@ class GetTopTracks(APIView):
 		response = executeSpotifyApiRequest(session_id, endpoint)
 
 		if 'error' in response or 'items' not in response:
-			return Response({'error': "Could access top artists"}, 
+			return Response({'error': "Could not access top artists"}, 
 					status=status.HTTP_204_NO_CONTENT)
 
 		songsList = self.topTracksCleaned(response)
@@ -108,7 +108,7 @@ class GetTopArtists(APIView):
 		response = executeSpotifyApiRequest(session_id, endpoint)
 
 		if 'error' in response or 'items' not in response:
-			return Response({"error: Could access top artists"}, status=status.HTTP_204_NO_CONTENT)
+			return Response({"error: Could not access top artists"}, status=status.HTTP_204_NO_CONTENT)
 
 		artistList = self.topArtistsCleaned(response)
 		return Response(artistList, status=status.HTTP_200_OK)

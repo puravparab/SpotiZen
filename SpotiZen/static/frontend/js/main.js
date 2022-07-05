@@ -1,8 +1,9 @@
 import { getTopTracksList, getTopArtistsList} from './spotify.js'
 
 // Home Page
-var urlTracks = "http://192.168.1.101:8000/spotify/top-tracks"
-var urlArtists = "http://192.168.1.101:8000/spotify/top-artists"
+const ROOT_URL = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port
+var urlTracks = ROOT_URL + "/spotify/top-tracks"
+var urlArtists = ROOT_URL + "/spotify/top-artists"
 
 const trackbtn1 = document.querySelector(".track-btn-1")
 const trackbtn2 = document.querySelector(".track-btn-2")
