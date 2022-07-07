@@ -1,3 +1,3 @@
 # Heroku Specific File
-release: python SpotiZen/manage.py migrate
-web: gunicorn SpotiZen.SpotiZen.wsgi --preload --log-file -
+release: python server/manage.py migrate
+web: gunicorn server.SpotiZen.wsgi --preload --log-file -
