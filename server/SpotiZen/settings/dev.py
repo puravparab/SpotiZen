@@ -128,7 +128,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    Path(BASE_DIR, 'SpotiZen/static'),
+    Path(BASE_DIR, 'server/static'),
 ]
 STATIC_ROOT = Path(BASE_DIR, 'staticfiles')
 
