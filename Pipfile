@@ -8,6 +8,10 @@ django = "==3.2.7"
 requests = "*"
 djangorestframework = "*"
 python-dotenv = "*"
+whitenoise = "*"
+psycopg2 = "*"
+gunicorn = "*"
+django-environ = "*"
 
 [dev-packages]
 
