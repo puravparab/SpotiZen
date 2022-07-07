@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -128,7 +128,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    Path(BASE_DIR, 'static'),
+    Path(BASE_DIR, 'SpotiZen/static'),
 ]
 STATIC_ROOT = Path(BASE_DIR, 'staticfiles')
 
