@@ -12,7 +12,18 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'frontend/css/dynamic.css' %}">
 
 	<title> SpotiZen </title>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-WBTR77RDH4"></script>
+	<script>
+	 	window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+	 	gtag('js', new Date());
+
+	 	gtag('config', 'G-WBTR77RDH4');
+	</script>
 </head>
+
 <body>
 	<div class="container">
 		{% block content %}
